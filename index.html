@@ -1,74 +1,193 @@
+<!DOCTYPE html>
 <html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PT GS Electrical</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #0b1f3a;
+  color: white;
+}
+
+/* NAVBAR */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: #07152a;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 120px 20px;
+  background: linear-gradient(135deg, #0b1f3a, #1e3c72);
+  animation: fadeIn 2s;
+}
+
+.hero h1 {
+  font-size: 48px;
+}
+
+.hero p {
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 25px;
+  background: #2f6fff;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+}
+
+/* SECTION */
+section {
+  padding: 80px 50px;
+  text-align: center;
+}
+
+.card {
+  background: #132a4d;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 15px;
+}
+
+/* GRID */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* MAP */
+iframe {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+}
+
+/* WA FLOAT */
+.wa {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* ANIMASI */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+</style>
+
+</head>
 <body>
 
 <header>
   <div class="logo">
-    <img src="logo.jpg" alt="Logo">
-    <div class="logo-text">
-      <strong>PT GS Electrical</strong>
-      <span>Service Machine</span>
+    <img src="logo.jpg">
+    <div>
+      <strong>PT GS Electrical</strong><br>
+      Service Machine
     </div>
   </div>
   <nav>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
+    <a href="#about">Tentang</a>
+    <a href="#services">Layanan</a>
+    <a href="#projects">Proyek</a>
+    <a href="#contact">Kontak</a>
   </nav>
 </header>
 
+<!-- HERO -->
 <section class="hero">
   <h1>PT GS Electrical Service Machine</h1>
-  <p>Solusi Engineering Electrical Profesional</p>
+  <p>Solusi teknik kelistrikan & mesin industri profesional</p>
   <a href="#contact" class="btn">Hubungi Kami</a>
 </section>
 
+<!-- ABOUT -->
 <section id="about">
   <h2>Tentang Kami</h2>
-  <div class="card">Perusahaan profesional di bidang engineering electrical.</div>
+  <p>Kami perusahaan profesional di bidang engineering electrical & service machine industri.</p>
 </section>
 
+<!-- SERVICES -->
 <section id="services">
   <h2>Layanan</h2>
-  <div class="card">Instalasi Electrical</div>
-  <div class="card">Maintenance Mesin</div>
-  <div class="card">Automation System</div>
+  <div class="grid">
+    <div class="card">Instalasi Panel Listrik</div>
+    <div class="card">Maintenance Mesin</div>
+    <div class="card">Automasi Industri</div>
+  </div>
 </section>
 
+<!-- PROJECT -->
 <section id="projects">
-  <h2>Project</h2>
-  <div class="card">Instalasi panel listrik industri</div>
-  <div class="card">Maintenance mesin pabrik</div>
+  <h2>Project / Pengalaman</h2>
+  <div class="grid">
+    <div class="card">Project Pabrik Batam</div>
+    <div class="card">Instalasi Panel Industri</div>
+    <div class="card">Maintenance Mesin Produksi</div>
+  </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
   <h2>Kontak</h2>
-  <div class="card">
-    Email: gsesmwifi@gmail.com<br>
-    WhatsApp: +62 823-3332-8378<br>
-    Alamat: Batam
-  </div>
+  <p>Email: gsesmwifinet@gmail.com</p>
+  <p>WhatsApp: +62 823-3332-8378</p>
+  <p>
+    Alamat:<br>
+    JALAN RAYA KP. BAGAN Komplek Asena Residence Blok B11-11,<br>
+    Tanjung Piayu, Sei Beduk, Batam
+  </p>
+
+  <br>
+
   <iframe src="https://www.google.com/maps?q=1.032335,104.070639&output=embed"></iframe>
 </section>
 
-<a href="https://wa.me/6282333328378" class="wa-float">💬</a>
-
-<footer>
-  © 2026 PT GS Electrical Service Machine
-</footer>
-
-<script>
-  const sections = document.querySelectorAll("section");
-  window.addEventListener("scroll", () => {
-    sections.forEach(sec => {
-      const top = window.scrollY;
-      const offset = sec.offsetTop - 300;
-      if(top > offset){
-        sec.classList.add("show");
-      }
-    });
-  });
-</script>
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/6282333328378" class="wa">💬</a>
 
 </body>
 </html>
